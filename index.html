@@ -4,10 +4,26 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
+        <audio id="audio-game" loop>
+            <source src="./sound/game.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio-overtaking">
+            <source src="./sound/overtaking.wav" type="audio/wav">
+        </audio>
+        <audio id="audio-breaking">
+            <source src="./sound/breaking.wav" type="audio/wav">
+        </audio>
         
-        <div class="score"></div>
         <div class="game">
-            <button class="game__start">Click here!</button>
+            <div class="game__header">
+                <span class="game__header-score"></span>
+                <span class="game__header-record"></span>
+            </div>
+            <div class="game__buttons">
+                <button class="game__button _easy" data-speed="4">Easy</button>
+                <button class="game__button _medium" data-speed="7">Medium</button>
+                <button class="game__button _hard" data-speed="10">Hard</button>
+            </div>
             <div class="game__area"></div>
         </div>
 

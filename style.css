@@ -17,6 +17,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    font-family: sans-serif;
+    font-weight: 500;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -44,7 +46,110 @@ table {
 
 
 ._hide {
-    display: none;
+    display: none !important;
+}
+
+.game {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.game__header {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #68A7E1;
+    color: white;
+    height: 60px;
+
+    display: flex;
+}
+
+.game__header-record {
+    position: absolute;
+    right: 20px;
+    width: 100%;
+    z-index: 1;
+    text-align: right;
+    line-height: 20px;
+}
+
+.game__header-score {
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    line-height: 20px;
+}
+
+.game__buttons {
+    z-index: 1;
+    top: 60px;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 700;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game__button {
+    flex-basis: 33%;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 700;
+    border: none;
+}
+
+.game__button._easy {
+    background-color: #50AC39;
+}
+
+.game__button._easy:hover {
+    background-color: #349027;
+}
+
+.game__button._easy:active {
+    background-color: #1E7419;
+}
+
+.game__button._medium {
+    background-color: #D4561B;
+}
+
+.game__button._medium:hover {
+    background-color: #B13C12;
+}
+
+.game__button._medium:active {
+    background-color: #8F260B;
+}
+
+.game__button._hard {
+    background-color: #B31516;
+}
+
+.game__button._hard:hover {
+    background-color: #960F1A;
+}
+
+.game__button._hard:active {
+    background-color: #79091C;
 }
 
 .car, .enemy {
@@ -52,16 +157,20 @@ table {
     height: 100px;
     background: transparent url("./image/player.png") center / cover no-repeat;
     position: absolute;
-    left: calc(50% - 25px);
-    bottom: 10px;   
 }
-.enemy {
+.enemy:nth-child(3n) {
+    background-image: url("./image/enemy.png");
+}
+.enemy:nth-child(3n+1) {
     background-image: url("./image/enemy2.png");
+}
+.enemy:nth-child(3n+2) {
+    background-image: url("./image/enemy3.png");
 }
 
 .game__area {
     width: 300px;
-    height: 100%;
+    flex-grow: 1;
     overflow: hidden;
     position: relative;
     margin: auto;
