@@ -1,0 +1,26 @@
+{
+  "name": "race-game",
+  "version": "1.0.0",
+  "description": "Race Game",
+  "main": "script.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --overwrite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtyomTalonchick/raceGame.git"
+  },
+  "author": "artyomtalonchick@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtyomTalonchick/raceGame/issues"
+  },
+  "homepage": "https://github.com/ArtyomTalonchick/raceGame#readme",
+  "devDependencies": {
+    "electron": "^13.1.4",
+    "electron-packager": "^15.2.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

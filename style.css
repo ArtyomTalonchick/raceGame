@@ -83,6 +83,12 @@ table {
     line-height: 20px;
 }
 
+@media (max-width: 400px) {
+    .game__header-score {
+        text-align: left;
+    }
+}
+
 .game__buttons {
     z-index: 1;
     top: 60px;
@@ -173,7 +179,7 @@ table {
     flex-grow: 1;
     overflow: hidden;
     position: relative;
-    margin: auto;
+    margin: 0 auto 10px;
     background: #222222;
 }
 
